@@ -60,3 +60,15 @@ function solution(str) {
   if (typeof str !== "string") return "";
   return str.split("").reverse().join("");
 }
+
+// Problem 6: Sum of Positive
+function positiveSum(arr) {
+  if (!Array.isArray(arr) || arr.length === 0) return 0;
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
+      sum += arr[i];
+    }
+  }
+  return sum;
+}
