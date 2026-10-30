@@ -156,3 +156,19 @@ function containsDuplicate(nums) {
   }
   return false;
 }
+
+// Problem 14: Move Zeroes
+function moveZeroes(nums) {
+  if (!Array.isArray(nums) || nums.length <= 1) return;
+  let write = 0;
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] !== 0) {
+      if (write !== i) {
+        const temp = nums[write];
+        nums[write] = nums[i];
+        nums[i] = temp;
+      }
+      write++;
+    }
+  }
+}
