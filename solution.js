@@ -101,3 +101,15 @@ function fizzBuzz(n) {
   }
   return result;
 }
+
+// Problem 10: Running Sum of 1D Array
+function runningSum(nums) {
+  if (!Array.isArray(nums)) return [];
+  const result = new Array(nums.length);
+  let currentSum = 0;
+  for (let i = 0; i < nums.length; i++) {
+    currentSum += nums[i];
+    result[i] = currentSum;
+  }
+  return result;
+}
