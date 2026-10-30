@@ -223,3 +223,18 @@ function threeSum(nums) {
 
   return result;
 }
+
+// Problem 17: Plus One
+function plusOne(digits) {
+  if (!Array.isArray(digits) || digits.length === 0) return [1];
+  const result = [...digits];
+  for (let i = result.length - 1; i >= 0; i--) {
+    if (result[i] < 9) {
+      result[i]++;
+      return result;
+    }
+    result[i] = 0;
+  }
+  result.unshift(1);
+  return result;
+}
