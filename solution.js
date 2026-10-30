@@ -238,3 +238,17 @@ function plusOne(digits) {
   result.unshift(1);
   return result;
 }
+
+// Problem 18: Reverse String
+function reverseString(s) {
+  if (!Array.isArray(s) || s.length <= 1) return;
+  let left = 0;
+  let right = s.length - 1;
+  while (left < right) {
+    const temp = s[left];
+    s[left] = s[right];
+    s[right] = temp;
+    left++;
+    right--;
+  }
+}
