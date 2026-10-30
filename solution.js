@@ -78,3 +78,8 @@ function summation(num) {
   if (typeof num !== "number" || num <= 0) return 0;
   return (num * (num + 1)) / 2;
 }
+
+// Problem 8: Convert a Boolean to a String
+function booleanToString(b) {
+  return b ? "true" : "false";
+}
