@@ -143,3 +143,16 @@ function removeDuplicates(nums) {
   }
   return write;
 }
+
+// Problem 13: Contains Duplicate
+function containsDuplicate(nums) {
+  if (!Array.isArray(nums) || nums.length <= 1) return false;
+  const seen = new Set();
+  for (let i = 0; i < nums.length; i++) {
+    if (seen.has(nums[i])) {
+      return true;
+    }
+    seen.add(nums[i]);
+  }
+  return false;
+}
