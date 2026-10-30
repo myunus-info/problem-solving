@@ -9,3 +9,18 @@ function staircase(n) {
   }
   return lines.join("\n");
 }
+
+// Problem 2: Grading Students
+function gradingStudents(grades) {
+  if (!Array.isArray(grades)) return [];
+  return grades.map(grade => {
+    if (grade < 38) {
+      return grade;
+    }
+    const remainder = grade % 5;
+    if (remainder >= 3) {
+      return grade + (5 - remainder);
+    }
+    return grade;
+  });
+}
