@@ -252,3 +252,21 @@ function reverseString(s) {
     right--;
   }
 }
+
+// Problem 19: Length of Last Word
+function lengthOfLastWord(s) {
+  if (typeof s !== "string") return 0;
+  let length = 0;
+  let i = s.length - 1;
+
+  while (i >= 0 && s[i] === " ") {
+    i--;
+  }
+
+  while (i >= 0 && s[i] !== " ") {
+    length++;
+    i--;
+  }
+
+  return length;
+}
