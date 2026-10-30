@@ -54,3 +54,9 @@ function repeatStr(n, s) {
   if (typeof n !== "number" || n <= 0 || typeof s !== "string") return "";
   return s.repeat(n);
 }
+
+// Problem 5: Reversed Strings
+function solution(str) {
+  if (typeof str !== "string") return "";
+  return str.split("").reverse().join("");
+}
