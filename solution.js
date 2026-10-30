@@ -48,3 +48,9 @@ function timeConversion(s) {
   const formattedHours = String(hours).padStart(2, "0");
   return `${formattedHours}:${minutes}:${seconds}`;
 }
+
+// Problem 4: String Repeat
+function repeatStr(n, s) {
+  if (typeof n !== "number" || n <= 0 || typeof s !== "string") return "";
+  return s.repeat(n);
+}
