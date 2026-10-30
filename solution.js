@@ -113,3 +113,20 @@ function runningSum(nums) {
   }
   return result;
 }
+
+// Problem 11: Richest Customer Wealth
+function maximumWealth(accounts) {
+  if (!Array.isArray(accounts) || accounts.length === 0) return 0;
+  let maxWealth = 0;
+  for (let i = 0; i < accounts.length; i++) {
+    const row = accounts[i];
+    let rowSum = 0;
+    for (let j = 0; j < row.length; j++) {
+      rowSum += row[j];
+    }
+    if (rowSum > maxWealth) {
+      maxWealth = rowSum;
+    }
+  }
+  return maxWealth;
+}
