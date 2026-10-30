@@ -130,3 +130,16 @@ function maximumWealth(accounts) {
   }
   return maxWealth;
 }
+
+// Problem 12: Remove Duplicates from Sorted Array
+function removeDuplicates(nums) {
+  if (!Array.isArray(nums) || nums.length === 0) return 0;
+  let write = 1;
+  for (let i = 1; i < nums.length; i++) {
+    if (nums[i] !== nums[i - 1]) {
+      nums[write] = nums[i];
+      write++;
+    }
+  }
+  return write;
+}
